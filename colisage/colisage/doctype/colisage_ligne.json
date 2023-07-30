@@ -1,0 +1,34 @@
+{
+  "module": "Colisage",
+  "name": "Colisage Ligne",
+  "doctype": "DocType",
+  "istable": 1,
+  "description": "Ligne de la liste de colisage",
+  "fields": [
+    {
+      "fieldname": "item",
+      "label": "Article",
+      "fieldtype": "Link",
+      "options": "Item",
+      "reqd": 1
+    },
+    {
+      "fieldname": "quantity",
+      "label": "Quantité",
+      "fieldtype": "Float",
+      "reqd": 1
+    },
+    {
+      "fieldname": "packing_type",
+      "label": "Type d'emballage",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "price",
+      "label": "Prix unitaire",
+      "fieldtype": "Currency",
+      "reqd": 1
+    }
+  ]
+}

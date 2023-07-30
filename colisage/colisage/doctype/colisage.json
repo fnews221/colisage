@@ -1,0 +1,68 @@
+{
+  "module": "Colisage",
+  "name": "Colisage",
+  "doctype": "DocType",
+  "istable": 0,
+  "description": "Liste de colisage pour le transport maritime",
+  "fields": [
+    {
+      "fieldname": "colisage_no",
+      "label": "Numéro de colisage",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "booking_no",
+      "label": "Numéro de booking",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "container_no",
+      "label": "Numéro de container",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "shipment_date",
+      "label": "Date d'expédition",
+      "fieldtype": "Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "customer",
+      "label": "Client",
+      "fieldtype": "Link",
+      "options": "Customer",
+      "reqd": 1
+    },
+    {
+      "fieldname": "items",
+      "label": "Articles",
+      "fieldtype": "Table",
+      "options": "Colisage Ligne",
+      "reqd": 1
+    },
+    {
+      "fieldname": "total_amount",
+      "label": "Montant total",
+      "fieldtype": "Currency",
+      "reqd": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "client_signature",
+      "label": "Signature du client",
+      "fieldtype": "Attach Image"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1
+    }
+  ]
+}

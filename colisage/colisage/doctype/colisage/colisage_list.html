@@ -1,0 +1,22 @@
+{% extends 'templates/list.html' %}
+
+{% block content %}
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Numéro de colisage</th>
+        <th>Numéro de booking</th>
+        <!-- Ajoutez d'autres en-têtes de colonne ici -->
+      </tr>
+    </thead>
+    <tbody>
+      {% for colisage in doclist %}
+      <tr>
+        <td><a href="#">{{ colisage.colisage_no }}</a></td>
+        <td>{{ colisage.booking_no }}</td>
+        <!-- Affichez d'autres données de chaque colisage ici -->
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
